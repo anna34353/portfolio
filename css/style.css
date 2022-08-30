@@ -1,0 +1,991 @@
+/* -------------------------
+
+    전체  시작!!!!!!!!!!!
+
+------------------------- */
+
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+li{list-style: none;}
+a{text-decoration: none;
+  color: inherit;}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------------
+
+    전체  끝!!!!!!!!!!!
+
+------------------------- */
+
+
+/* -------------------------
+
+    토글메뉴 시작!!!!!
+
+    mobile>>> z-index:10
+    pc>>> z-index:20
+
+------------------------- */
+
+#toggle_mobile{
+  display: block;
+  font-family: 'S-CoreDream-6Bold';
+}
+
+#toggle_pc{
+  display: none;
+  font-family: 'S-CoreDream-6Bold';
+}
+
+.burger{
+  position: fixed;
+  z-index: 10;
+  transition: all 0.5s;
+  background: rgba(255, 255, 255, 0.6);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.burger div{
+  background: #2A335A;
+  width: 35px;
+  height: 5px;
+  margin: 5px 0 5px 8px;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.burger div:first-child{
+  margin-top: 12px;
+}
+
+.toggle{
+  transform: translate(150px, 6px);
+  transition: all 0.8s;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.toggleBG {
+  width: 230px;
+  height: 100vh;
+  background: beige;
+  position: fixed;
+  left: -300px;
+  transition: 0.6s;
+  z-index: 9;
+}
+
+.toggleBG ul{
+  padding-top: 100px;
+  margin-left: 20px;
+}
+
+.toggleBG ul li{
+  margin-bottom: 20px;
+}
+
+.none {
+  position: fixed;
+  left:0;
+  transition: 0.6s;
+  box-shadow: 0 0 300px 0 rgba(0, 0, 0, 0.7);
+}
+
+
+@media screen and (min-width: 769px){
+
+  #toggle_mobile{
+    display: none;
+  }
+
+  #toggle_pc{
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+    z-index: 10;
+    font-size: 20px;
+    mix-blend-mode:luminosity;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    /* backdrop-filter: blur(5px); */
+    font-weight: bold;
+  }
+  
+  nav ul{
+    display: flex;
+    padding: 30px;
+    justify-content: end;
+  }
+  nav ul li{
+    width: 110px;
+    text-align: center;
+  }
+
+}
+
+#toggle_mobile nav ul li a{
+  position: relative;
+  color: #2A335A;
+}
+
+#toggle_mobile nav ul li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#toggle_mobile nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#toggle_mobile nav ul li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #90779E;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+#toggle_pc nav ul li{
+  position: relative;
+}
+#toggle_pc nav ul li a{
+  color: white;
+}
+
+#toggle_pc nav ul li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#toggle_pc nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#toggle_pc nav ul li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #FFD7ED;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+
+/* -------------------------
+
+    토글메뉴 끝!!!!!
+
+------------------------- */
+
+
+/* -------------------------
+
+    인트로 시작!!!!!
+
+------------------------- */
+
+
+#intro_a{
+  position: relative;
+}
+#intro_gd{
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #B18FDD, transparent);
+  position: absolute;
+  bottom: 0px;
+  z-index: 5;
+}
+
+#Intro{
+    background: url(../img/bg_t3.jpg) center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+}
+
+/* #Intro::before{
+  background: linear-gradient(to top, #0a2a43, transparent);
+} */
+
+#intro_img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(45% - 100px);
+    left: calc(50% - 100px);
+    /*애니메이션*/
+    animation-name: intro_img;
+    animation-duration: 2s;
+    /* animation-duration: leaner; */
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes intro_img {
+  0%{
+    top: 180px;
+  }
+  100%{
+    top: 230px;
+  }
+}
+
+
+#intro_typing{
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    text-align: center;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 24px;
+}
+
+#Intro button{
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 14px 0;
+    width: 238px;
+    border: 2px solid #fff;
+    border-radius: 27px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    font-family: "maple_b";
+    cursor: pointer;
+}
+
+#intro_button:hover{
+	transition: all .5s ease-in-out;
+	background-color:white;
+	color: #2A335A;
+  text-shadow: none;
+}
+
+
+/* -------------------------
+
+    인트로 끝!!!!!
+
+------------------------- */
+
+
+/* -------------------------
+
+    about 시작!!!!!
+
+------------------------- */
+
+
+#About{
+    width: 100%;
+    background: linear-gradient(to bottom, #B18FDD, #AD99C7, #FFFFFF);
+}
+
+#about_title{
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 16px;
+    font-family: "maple_b";
+}
+
+#about_line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 27.7%;
+    height: 4px;
+    background: white;
+}
+
+.star{
+    color: #2A335A;
+    font-size: 40px;
+    padding: 8px 8px 0 8px;
+}
+
+#about_img{
+    margin: 0 auto;
+    margin-top: 48px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.about_text{
+    text-align: center;
+    font-size: 20px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+#about_text1-1{
+  font-family: 'GangwonEdu_OTFBoldA';
+  margin-bottom: 36px;
+}
+#about_text1-2{
+  font-family: 'GangwonEdu_OTFLightA';
+  margin-bottom: 200px;
+  line-height: 32px;
+}
+
+.about_text span{
+    color: #2A335A;
+}
+
+#About_2{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about2_ft{
+  width: 100%;
+}
+
+#About_2 .about2_icon2{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #2A335A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#About_2 .about2_icon2 img{
+    width: 80%;
+    height: 80%;
+}
+#About_2 .about2_icon2 img:first-of-type{
+    width: 60%;
+    height: 60%;
+}
+
+#About_2 .about2_text2{
+    margin: 30px 0 80px 0;
+    font-family: 'GangwonEdu_OTFLightA';
+    font-size: 18px;
+    padding-inline: 16px;
+    word-break: keep-all;
+}
+
+.tt{
+    margin-bottom: 16px;
+    font-family: "maple_b";
+}
+
+#about_button_text{
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+#about_button_text{
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 15px;
+}
+
+#about_resume{
+  width: 100%;
+}
+
+#About_2 button{
+    margin-bottom: 100px;
+    padding: 14px 0;
+    width: 238px;
+    background: white;
+    color: #2A335A;
+    font-family: "maple_b";
+    font-size: 22px;
+    border: none;
+    border-radius: 27px;
+    box-shadow: inset 0px 3px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+
+#about_resume button:hover{
+	transition: all .2s linear;
+	/* transition: all .3s ease-in-out; */
+	background-color:#2A335A;
+	color:white;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+  text-shadow: inset 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .about2_ft{
+    width: 40%;
+    /* padding: 0 60px; */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+
+  .about2_ft{
+    width: 30%;
+    padding: 0 30px;
+  }
+
+}
+
+
+/* -------------------------
+
+    about 끝!!!!!
+
+------------------------- */
+
+/* -------------------------
+
+    skills 시작!!!!!
+
+------------------------- */
+
+
+#Skills{
+    padding: 130px 0 100px 0;
+    /* position: relative; */
+    background: linear-gradient(to bottom, #FFFFFF, #FFD7E2, #F3C0E5);
+}
+
+#skill_title{
+    font-size: 40px;
+    color: #2A335A;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: "maple_b";
+}
+
+#skill_box{
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  max-width: 800px;
+}
+
+.skill_bar {
+  display: flex;
+  align-items: center;
+  padding: 0 25px 50px 25px;
+}
+
+.skill_bar:first-child{
+  padding-top: 50px;
+}
+
+.bar_name p{
+  font-family: 'S-CoreDream-6Bold';
+  color: #2b2b2b;
+  font-size: 18px;
+  width: 120px;
+  text-align: center;
+}
+
+.bar_container {
+  width: 100%;
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 1rem;
+  margin-inline: 20px;
+  display: flex;
+}
+
+.bar_color {
+  background: #A480A4;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.bar_text{
+  color: #2b2b2b;
+  font-weight: bold;
+  padding-left: 6px;
+  line-height: 19px;
+}
+
+.a_ani {
+  animation-name: ania;
+  animation-duration: 1.8s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes ania {
+  0% {
+      width: 1%;
+  }
+
+  100% {
+      width: 80%;
+  }
+}
+
+.b_ani {
+  animation-name: bnia;
+  animation-duration: 1.8s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes bnia {
+  0% {
+      width: 1%;
+  }
+
+  100% {
+      width: 60%;
+  }
+}
+
+.c_ani {
+  animation-name: cnia;
+  animation-duration: 1.8s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes cnia {
+  0% {
+      width: 1%;
+  }
+
+  100% {
+      width: 55%;
+  }
+}
+
+.d_ani {
+  animation-name: dnia;
+  animation-duration: 1.8s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes dnia {
+  0% {
+      width: 1%;
+  }
+
+  100% {
+      width: 30%;
+  }
+}
+
+
+@media screen and (max-width:540px){
+  .skill_bar{
+    flex-direction: column;
+    padding: 0 20px 50px 20px;
+    padding-bottom: 50px;
+  }
+  .skill_bar:first-child{
+    padding-top: 50px;
+  }
+  .bar_container{
+    margin: 20px 0;
+  }
+
+}
+  
+ 
+  /* -------------------------
+
+    skills 끝!!!!!
+
+------------------------- */
+
+
+  /* -------------------------
+
+    works 시작!!!!!
+
+------------------------- */
+
+
+  #gd{
+    position: relative;
+  }
+
+  #abcd{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #F3C0E5, transparent);
+    z-index: 1;
+  }
+  
+
+#works_title{
+  font-size: 40px;
+  color: #2A335A;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 20%;
+  font-family: "maple_b";
+  width: 100%;
+  height: 100px;
+}
+
+.swiper-slide{
+  position: relative;
+  text-align: center;
+}
+
+.swiper_num{
+  position: absolute;
+  font-size: 150px;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+  color: #A480A4;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .swiper_num{
+    font-size: 180px;
+    top: -2%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  .swiper_num{
+    font-size: 210px;
+    top: -5%;
+  }
+}
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
+  .swiper_num{
+    font-size: 240px;
+    top: -7%;
+  }
+}
+@media screen and (min-width: 1601px) {
+  .swiper_num{
+    font-size: 240px;
+    top: -6%;
+  }
+}
+
+.swiper_bg{
+  background: rgba(176, 143, 220, 0.3);
+  mix-blend-mode: multiply;
+  height: 66vw;
+  margin: 150px 0;
+  position: relative;
+}
+
+.swiper-button-prev{
+  color: #A480A4 !important;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  font-weight: bold;
+  /* border-radius: 50%; */
+}
+
+.swiper-button-next{
+  color: #A480A4 !important;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  font-weight: bold;
+  /* border-radius: 50%; */
+}
+
+.swiper-pagination{
+  display: none;
+}
+
+.swiper_title{
+  font-size: max(3vmax, 30px);
+  padding: 40px 0 5% 0;
+  color: #2b2b2b;
+  font-family: 'S-CoreDream-6Bold';
+}
+
+.swiper_image{
+  width: 90%;
+  height: 34vw;
+  margin: 0 auto;
+}
+
+#swiper_image1{
+  background: url(../img/swiper_image1.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#swiper_image2{
+  background: url(../img/swiper_image2.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#swiper_image3{
+  background: url(../img/swiper_image3.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper_hover{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 5%;
+  font-family: 'S-CoreDream-6Bold';
+}
+
+.swiper_hover:hover{
+  opacity: 1;
+}
+
+.swiper_button{
+  width: 180px;
+  padding: 10px 5px;
+  color: #A480A4;
+  border: 2px solid #A480A4;
+  border-radius: 27px;
+  font-family: "maple_b";
+  margin: 0 auto;
+}
+
+.swiper_hover p {
+  display: none;
+}
+.swiper_hover h3 {
+  display: none;
+}
+.swiper_diary{
+  display: none;
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* .swiper_num{
+    font-size: 180px;
+    top: -20px;
+  }
+
+  .swiper_title{
+    font-size: 40px;
+    padding: 20px 0 10% 0;
+  } */
+
+  .swiper_bg{
+    height: 55vw;
+  }
+
+  .swiper_hover h3 {
+    display: block;
+  }
+
+  .swiper_diary{
+  display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+
+  /* .swiper_num{
+    font-size: 200px;
+    top: -40px;
+  }
+
+  .swiper_title{
+    font-size: 48px;
+    padding: 20px 0 10% 0;
+  } */
+
+  .swiper_bg{
+    height: 55vw;
+  }
+
+  .swiper_hover h3 {
+    display: block;
+  }
+  .swiper_hover p {
+    display: block;
+  }
+
+}
+
+
+  /* -------------------------
+
+    works 끝!!!!!
+
+------------------------- */
+
+
+  /* -------------------------
+
+    contact 시작!!!!!
+
+------------------------- */
+
+
+#contact_bg{
+  background: url(../img/bg_b3.jpg) center;
+  background-size: cover;
+  padding: 170px 0 100px 0;
+  position: relative;
+  /* width: 100%; */
+  /* height: 200vw; */
+}
+/* 
+#contact_gd{
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, white, #fcd3e1, transparent);
+  position: absolute; 
+  top: 20px;
+  z-index: 1;
+} */
+
+footer{
+  width: 90%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(137, 136, 255, 0.2);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+  /* text-align: center; */
+  color: white;
+  font-family: 'GangwonEdu_OTFLightA';
+}
+
+footer div{
+ text-shadow: 2px 2px 6px rgba(22, 21, 45, 0.9);
+}
+
+#contact_title{
+  font-size: 40px;
+  font-family: "maple_b";
+  text-align: center;
+  padding-top: 50px;
+}
+
+#contact_text1{
+  font-size: 26px;
+  text-align: center;
+}
+
+#contact_text1 .contact_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding-top: 50px;
+}
+.contact_hover{
+  animation-name: hover_text;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes hover_text {
+  from {
+    text-shadow: none;
+  }
+  to{
+    text-shadow: 0 0 5px rgba(255, 255, 190, 0.8);
+  }
+}
+
+#contact_text1 .contact_icon_top{
+  padding: 10px;
+}
+
+#contact_text2{
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact_text2 .contact_text{
+  padding: 70px 50px 10px 50px;
+}
+
+#contact_text2 .contact_icon_bottom{
+  width: 64px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 769px){
+
+  .contact_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .contact_icon{
+    padding-top: 0 !important;
+    margin-right: 10px;
+  }
+
+  .contact_icon_top{
+    padding: 0 !important;
+    margin-right: 10px;
+  }
+}
+
+
+  /* -------------------------
+
+    contact 끝!!!!!
+
+------------------------- */

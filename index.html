@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aehyang kim's portfolio</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/swiper-bundle.esm.browser.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/jquery.scrollTo.min.js"></script>
+<script src="./js/skills-bar.js"></script>
+
+
+</head>
+<body>
+    <header>
+      <div id="toggle_mobile">
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="toggleBG">
+          <nav>
+            <ul>
+                <li><a href="#Intro">Intro</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Works">Works</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+    
+        </div>
+      </div>
+      <div id="toggle_pc">
+          <nav>
+            <ul>
+                <li><a class="toggle_pc_a" href="#Intro">Intro</a></li>
+                <li><a class="toggle_pc_a" href="#About">About</a></li>
+                <li><a class="toggle_pc_a" href="#Skills">Skills</a></li>
+                <li><a class="toggle_pc_a" href="#Works">Works</a></li>
+                <li><a class="toggle_pc_a" href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+        <div id="intro_a">
+          <div id="intro_gd"></div>
+          <div id="Intro">
+              <div id="intro_img"><img src="./img/t1_cr.png" alt="꿈꾸는 소녀"></div>
+              <div id="intro_typing">
+                
+              </div>
+              <button id="intro_button"><a href="#About">Take A Look</a></button>
+          </div>
+        </div>
+    </header>
+    <section id="About">
+        <div id="about_title">About</div>
+        <div id="about_line">
+            <div class="line"></div>
+            <div class="star">*</div>
+            <div class="line"></div>
+        </div>
+        <div id="about_img"><img src="./img/about_photo.jpg" alt=""></div>
+        <div>
+          <div id="about_text1-1" class="about_text">안녕하세요, 프론트엔드 개발자를 꿈꾸는 <span>김애향</span>입니다.</div>
+          <div id="about_text1-2" class="about_text">'늦었다고 생각할 때가 가장 빠를 때다'라는 마음가짐으로 새롭게 웹디자인&웹개발 분야에 도전하게 되었습니다. <br/>열정을 가지고 배워서 웹사이트와 같은 눈에 보이는 결과를 내고자 발전하고 노력합니다!</div>
+        </div>
+    </section>
+    <section id="About_2">
+        <div class="about2_ft" data-aos="fade-up">
+            <div class="about2_icon2"><img src="./img/icon_001.svg" alt=""></div>
+            <div class="about2_text2">
+                <div class="tt">#쉽게 포기하지 않는 열정</div>
+                <div>책임감을 가지고 맡은 일은 끝까지 해내요</div>
+            </div>
+        </div>
+        <div class="about2_ft" data-aos="fade-up">
+            <div class="about2_icon2"><img src="./img/icon_002.svg" alt=""></div>
+            <div class="about2_text2">
+                <div class="tt">#사용자 경험을 중요시하는 마인드셋</div>
+                <div>쉽게 간과할 수 있는 디테일까지 신경써야 한다고 생각해요</div>
+            </div>
+        </div>
+        <div class="about2_ft" data-aos="fade-up">
+            <div class="about2_icon2"><img src="./img/icon_003.svg" alt=""></div>
+            <div class="about2_text2">
+                <div class="tt">#융통성_의사소통능력</div>
+                <div>주변 환경에 빠르고 유연하게 적응할 수 있어요</div>
+            </div>
+        </div>
+        <div id="about_resume">
+          <div id="about_button_text">더 자세한 사항은 아래를 클릭해주세요!</div>
+          <a href="./file/성실과 열정으로 내일의 가능성을 열겠습니다..pdf"><button>Download Resume</button></a>
+        </div>
+        
+    </section>
+    <section id="Skills">
+        <div id="skill_title">Skills</div>
+        <div id="skill_box">
+          <div class="skill_bar">
+            <div class="bar_name">
+              <p>HTML/CSS</p>
+            </div>
+            <div class="bar_container">
+              <div id="bar_html-css" class="bar_color">
+              </div>
+              <div class='bar_text a_num'></div>
+            </div>
+          </div>
+          <div class="skill_bar">
+            <div class="bar_name">
+              <p>JavaScript</p>
+            </div>
+            <div class="bar_container">
+              <div id="bar_javascript" class="bar_color">
+              </div>
+              <div class='bar_text b_num'></div>
+            </div>
+          </div>
+          <div class="skill_bar">
+            <div class="bar_name">
+              <p>jQuery</p>
+            </div>
+            <div class="bar_container">
+              <div id="bar_react" class="bar_color">
+              </div>
+              <div class='bar_text c_num'></div>
+            </div>
+          </div>
+          <div class="skill_bar">
+            <div class="bar_name">
+              <p>React</p>
+            </div>
+            <div class="bar_container">
+              <div id="bar_nodejs" class="bar_color">
+              </div>
+              <div class='bar_text d_num'></div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <div id="gd">
+      <div id="abcd"></div>
+      <section id="Works">
+          <div id="works_title">Works</div>
+          <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper_num">01</div>
+                <div class="swiper_bg">
+                  <div class="swiper_title">YJ 리뉴얼</div>
+                  <div class="swiper_image" id="swiper_image1">
+                      <div class="swiper_hover">
+                        <h3>Open API를 활용한 영진직업전문학교 리뉴얼 및 SNS 연동 회원 관리 시스템 구현</h3>
+                        <p>프로젝트 구분 : 팀 프로젝트</p>
+                        <p>담당(기여도): 기획 및 퍼블리싱(33%)</p>
+                        
+                        <p>사용 툴 : XD, Visual Studio Code</p>
+                        <p>가용 기기: Mobile, PC</p>
+                        
+                        <div class="swiper_diary"></div>
+                        <div class="swiper_button"><a href="http://pico44.dothome.co.kr/" target="_blank"
+                          rel="noreferrer">이동하기</a></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper_num">02</div>
+                <div class="swiper_bg">
+                  <div class="swiper_title">JUNiX</div>
+                  <div class="swiper_image" id="swiper_image2">
+                      <div class="swiper_hover">
+                        <h3>Open API를 활용한 온라인 전시 플랫폼(주닉스) SNS 마케팅 자동화 스마트 웹앱 구현</h3>
+                        <p>프로젝트 구분 : 팀 프로젝트</p>
+                        <p>담당(기여도): 퍼블리싱 및 프론트엔드(33%)</p>
+                        
+                        <p>사용 툴 : XD, Visual Studio Code</p>
+                        <p>가용 기기: Mobile, PC</p>
+                        
+                        <div class="swiper_diary"></div>
+                        <div class="swiper_button"><a href="http://dogid8760.dothome.co.kr/junix/"target="_blank"
+                          rel="noreferrer">이동하기</a></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper_num">03</div>
+                <div class="swiper_bg">
+                  <div class="swiper_title">가보자GO</div>
+                  <div class="swiper_image" id="swiper_image3">
+                      <div class="swiper_hover">
+                        <h3>Open API를 활용한 GPS 인증 하이브리드 웹앱(가보자고) 구현</h3>
+                        <p>프로젝트 구분 : 팀 프로젝트</p>
+                        <p>담당(기여도): 퍼블리싱 및 프론트엔드(33%)</p>
+                        
+                        <p>사용 툴 : XD, Visual Studio Code</p>
+                        <p>가용 기기: Mobile, PC</p>
+                        
+                        <div class="swiper_diary"></div>
+                        <div class="swiper_button"><a href="http://dogid8760.dothome.co.kr/gabojago/"target="_blank"
+                          rel="noreferrer">이동하기</a></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+      </section>
+      <div id="contact_bg">
+        <!-- <div id="contact_gd"></div> -->
+        <footer id="Contact">
+            <div id="contact_title">Contact</div>
+            <div id="contact_text1">
+                <div class="contact_flex">
+                  <div class="contact_icon">
+                    <div class="contact_icon_top"><img src="./img/contact1.png" alt=""></div>
+                    <div class="contact_hover">E-mail :</div>
+                  </div>
+                  <div class="contact_hover">anna34353@gmail.com</div>
+                </div>
+                <div class="contact_flex">
+                  <div class="contact_icon">
+                    <div class="contact_icon_top"><img src="./img/contact2.png" alt=""></div>
+                    <div class="contact_hover">Phone :</div>
+                  </div>
+                  <div class="contact_hover">010-9992-8760</div>
+                </div>
+            </div>
+            <div id="contact_text2">
+                <div>
+                    <div class="contact_text contact_hover">GitHub</div>
+                    <div class="contact_icon_bottom"><img src="./img/github.png" alt=""></div>
+                </div>
+                <div>
+                    <div class="contact_text contact_hover">Notion</div>
+                    <div class="contact_icon_bottom"><img src="./img/notion.png" alt=""></div>
+                </div>
+            </div>
+        </footer>
+      </div>
+    </div>
+
+    <!--토글메뉴-->
+    <script>
+      const button = () => {
+          const burger = document.querySelector('.burger'); // HTML에서 태그 or class or  id 찾기
+          const toggleBG = document.querySelector(".toggleBG"); // HTML에서 태그 or class or  id 찾기
+          burger.addEventListener('click', function () {
+              burger.classList.toggle('toggle'); // 바닐라ver. toggle : 스위치 처럼 (' ') 안에  클래스명을 부여하고 지우고를 할수있음
+              toggleBG.classList.toggle('none');
+          })
+      }
+      button(); // 변수 호출을 해줘야 함.
+  </script>
+
+  <!--스크롤이벤트-->
+    <script>
+      function changeColor() {
+        const toggle_pc = $('.toggle_pc_a');
+        //  let posY = toggle_pc.getBoundingClientRect().top;
+         if(window.scrollY > 1150){
+          toggle_pc.css('color','#0F1221');
+         }else {
+          toggle_pc.css('color','white');
+          // toggle_pc.css('text-shadow','none');
+         }
+      }
+
+      window.addEventListener('scroll',e=>{
+        changeColor();
+      });
+    </script>
+
+
+    <!--typewriter-->
+    <script>
+
+      var typing = document.getElementById('intro_typing');
+      var typewriter = new Typewriter(typing, {
+          loop: true
+      });
+      
+      typewriter.typeString('Hello, I\'m Aehyang Kim')
+          .pauseFor(2500)
+          .deleteChars(11)
+          .typeString('frontend developer')
+          .pauseFor(2500)
+          .deleteChars(29)
+          .typeString('Welcome to My Portfolio!')
+          .pauseFor(2500)
+          .start();
+      </script>
+
+      <!--버튼-->
+      <script>
+        const intro_button = document.querySelector('#intro_button');
+        var aa = $('#about_title');
+        // console.log(aa.getBoundingClientRect().top)
+        intro_button.addEventListener('click', function(e){
+          e.preventDefault();
+          window.scrollTo({behavior:"smooth"})
+        })
+      </script>
+
+            <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop:true,
+            resistance:true,
+            autoplay: {
+              delay: 1500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+          $('.swiper_image').on('mouseenter', function(e){
+            console.log('stop autoplay');
+            swiper.autoplay.stop();
+          })
+          $('.swiper_image').on('mouseleave', function(e){
+            console.log('start autoplay');
+            swiper.autoplay.start();
+          })
+        </script>
+
+        <!---->
+        <script>
+          AOS.init({
+            duration:800
+          });
+        </script>
+        <script>
+          $(function(){
+            $('nav a').click(function(e){
+              console.log(this)
+                $.scrollTo(this.hash ||0, 500); //작을수록 빠르다
+                e.preventDefault();
+            });
+            $('#intro_button a').click(function(e){
+              console.log(this)
+                $.scrollTo(this.hash ||0, 500); //작을수록 빠르다
+                e.preventDefault();
+            });
+          });
+        </script>
+</body>
+</html>

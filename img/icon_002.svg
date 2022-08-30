@@ -1,0 +1,9 @@
+<svg id="target-svgrepo-com_1_" data-name="target-svgrepo-com (1)" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <circle id="타원_6" data-name="타원 6" cx="227.018" cy="227.018" r="227.018" transform="translate(0 57.958)" fill="#8988ff"/>
+  <path id="패스_15" data-name="패스 15" d="M227.018,57.963c125.379,0,227.018,101.639,227.018,227.018S352.4,512,227.018,512" fill="#6564b9"/>
+  <circle id="타원_7" data-name="타원 7" cx="158.913" cy="158.913" r="158.913" transform="translate(68.105 126.063)" fill="#fff"/>
+  <path id="패스_16" data-name="패스 16" d="M227.018,126.069a158.913,158.913,0,0,1,0,317.826" fill="#c4c4ff"/>
+  <circle id="타원_8" data-name="타원 8" cx="90.807" cy="90.807" r="90.807" transform="translate(136.211 194.169)" fill="#6564b9"/>
+  <path id="패스_17" data-name="패스 17" d="M227.018,194.174a90.807,90.807,0,1,1,0,181.614" fill="#8988ff"/>
+  <path id="패스_18" data-name="패스 18" d="M512,106.386V72.334H463.746l24.128-24.128-24.08-24.08L439.667,48.254V0H405.615V82.307l-174.3,174.3-4.3,28.378,28.378-4.3,174.3-174.3Z" fill="#ffaf01"/>
+</svg>
